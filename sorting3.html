@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Merged Sort</h1>
+					<p>Insertion sort adalah algoritma pengurutan sederhana yang bekerja dengan cara memasukkan setiap elemen dari daftar yang belum diurutkan secara iteratif ke posisi yang benar dalam bagian daftar yang sudah diurutkan. Ini seperti mengurutkan kartu remi di tangan Anda. Anda membagi kartu menjadi dua kelompok: kartu yang sudah diurutkan dan kartu yang belum diurutkan. Kemudian, Anda mengambil kartu dari kelompok yang belum diurutkan dan meletakkannya di
+						 tempat yang tepat dalam kelompok yang sudah diurutkan.</p>
+					<img src="img/insert.png" alt="" width="500px" height="475px">
+					<ul>
+						<li>Mulailah dengan elemen kedua karena elemen pertama diasumsikan sudah terurut.</li>
+						<li>Bandingkan elemen kedua dengan elemen pertama; jika elemen kedua lebih kecil, tukar posisinya.</li>
+						<li>Insertion Sort Algorithm - GeeksforGeeks.html</li>
+						<li>Ulangi hingga seluruh array terurut.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							def MergedSort(A):
+                                <br>->n = len(A)
+                                <br>->if (n<'2):
+                                <br>->return
+                                <br>->mid = len(A)//2
+                                <br>->left = A[:mid]
+                                <br>->right = A[mid:]
+                                <br>->MergedSort(left)
+                                <br>->MergedSort(right)
+                                <br>->i=0
+                                <br>->j=0
+                                <br>->k=0
+                                <br>->while i < len(left) and j < len(right):
+                                    <br>-->if left[i] < right[j]:
+                                        <br>--->A[k]=left[i]
+                                        <br>--->i=i+1
+                                    <br>-->else:
+                                        <br>--->A[k]=right[j]
+                                        <br>--->j=j+1
+                                    <br>-->k=k+1
+
+                                <br>while i < len(left):
+                                    <br>-->A[k]=left[i]
+                                    <br>-->i=i+1
+                                    <br>-->k=k+1
+
+                                <br>while j < len(right):
+                                    <br>-->A[k]=right[j]
+                                    <br>-->j=j+1
+                                    <br>-->k=k+1
+
+                            <br>Alist= [54,26,93,17,99,77,31,44,55,20,100]
+                            <br>MergedSort(Alist)
+                            <br>print(Alist)
+
+						</code>
+					</post>
+				</section>
+				<section class="card">
+					<h1>Shell Sort</h1>
+					<p>QuickSort adalah algoritma pengurutan berdasarkan prinsip Bagi dan Taklukkan yang memilih sebuah elemen sebagai pivot dan mempartisi array yang diberikan di sekitar pivot yang dipilih dengan menempatkan pivot pada posisi yang benar dalam 
+						array yang telah diurutkan.</p>
+					<img src="img/quicksort.webp" alt="" width="700px" height="350px">
+					<p>Pada dasarnya ada tiga langkah dalam algoritma tersebut:</p>
+					<ul>
+						<li>Pilih Pivot: Pilih salah satu elemen dari array sebagai pivot. Pilihan pivot dapat bervariasi (misalnya, elemen pertama, elemen terakhir, elemen acak, atau median).</li>
+						<li>Mempartisi Larik: Susun ulang larik di sekitar pivot. Setelah dipartisi, semua elemen yang lebih kecil dari pivot akan berada di sebelah kirinya, dan semua elemen yang lebih besar dari pivot akan berada di sebelah kanannya.</li>
+						<li>Panggilan Rekursif: Terapkan proses yang sama secara rekursif pada dua sub-array yang telah dipartisi.</li>
+						<li>Kasus Dasar: Rekursi berhenti ketika hanya tersisa satu elemen dalam sub-array, karena satu elemen sudah terurut.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							<br>def shellSort(alist):
+                                <br>->sublistcount = len(alist)//2
+                                <br>->while sublistcount > 0:
+
+                                <br>->for startposition in range(sublistcount):
+                                    <br>-->print(sublistcount)
+                                    <br>-->gapInsertionSort(alist,startposition,sublistcount)
+                                <br>->sublistcount = sublistcount // 2
+
+                            <br>def gapInsertionSort(alist,start,gap):
+                                <br>->for i in range(start+gap,len(alist),gap):
+
+                                    <br>-->currentvalue = alist[i]
+                                    <br>-->position = i
+
+                                    <br>-->while position>=gap and alist[position-gap]>currentvalue:
+                                        <br>--->alist[position]=alist[position-gap]
+                                        <br>--->position = position-gap
+
+                                    <br>-->alist[position]=currentvalue
+                                    <br>-->print(alist)
+                                    
+
+
+                            <br>alist = [35,33,42,10,14,19,27,44]
+                            <br>print(alist)
+                            <br>shellSort(alist)
+                            <br>print(alist)
+
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>

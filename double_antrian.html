@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Double Antrian</h1>
+					<p>Deque adalah singkatan dari Double-Ended Queue (Antrean Dua Ujung). Ini adalah jenis struktur data khusus yang memungkinkan Anda untuk menambahkan dan menghapus elemen dari kedua ujungnya secara efisien. Hal ini membuatnya berguna dalam aplikasi seperti penjadwalan tugas, 
+						masalah jendela geser, dan pemrosesan data waktu nyata.</p>
+					<img src="img/Picture31.png" alt="" width="700px" height="300px">
+					<h2>Operasi pada Deque </h2>
+					<ul>
+						<li>Deque() : membuat deque kosong.</li>
+						<li>addFront(item) : menambah item di depan deque.</li>
+						<li>addRear(item) : menambah item di belakang deque.</li>
+						<li>removeFront() : menghapus dan mengembalikan item depan.</li>
+						<li>removeRear() : menghapus dan mengembalikan item belakang.</li>
+						<li>isEmpty() : mengecek apakah deque kosong (true/false).</li>
+						<li>size() : mengembalikan jumlah item dalam deque.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							from collections import deque
+
+							<br># membuat deque kosong
+							<br>data = deque()
+
+							<br># menambah data
+							<br>data.append("A")       # tambah belakang
+							<br>data.appendleft("B")   # tambah depan
+
+							<br>print(data)
+
+							<br># menghapus data
+							<br>data.pop()        # hapus belakang
+							<br>data.popleft()    # hapus depan
+
+							<br>print(data)
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+	</body>
+</html>

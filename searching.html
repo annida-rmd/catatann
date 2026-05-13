@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Searching</h1>
+					<p>Searching adalah proses mendasar untuk menemukan elemen atau item tertentu dalam kumpulan data. 
+						Kumpulan data ini dapat berupa berbagai bentuk, seperti array, daftar, pohon, atau representasi terstruktur lainnya.</p>
+					<table>
+						<tr>
+							<td><img src="img/unsupervised_learning.webp" alt="" width="250px" height="180px"></td>
+							<td><img src="img/cybersecurity_trends.webp" alt="" width="250px" height="180px"></td>
+							<td><img src="img/searching_algorithms.webp" alt="" width="250px" height="180px"></td>
+						</tr>
+					</table>
+					<h2>Linear Search</h2>
+					<p>Ini adalah algoritma pencarian paling sederhana yang memeriksa setiap elemen secara berurutan hingga kunci ditemukan atau seluruh koleksi telah dijelajahi. Bekerja pada data yang 
+						sudah diurutkan maupun yang belum diurutkan.</p>
+						<p>Misalnya: Perhatikan array arr[] = {10, 50, 30, 70, 80, 20, 90, 40} dan key = 30</p>
+					<table>
+						<tr>
+							<td><img src="img/Linear-search-algorithm-1.webp" alt="" width="250px" height="180px"></td>
+							<td><img src="img/Linear-search-algorithm-2.webp" alt="" width="250px" height="180px"></td>
+							<td><img src="img/Linear-search-algorithm-3.webp" alt="" width="250px" height="180px"></td>
+						</tr>
+					</table>
+					<h3>Contoh Code</h3>
+					<post>
+						<code>
+							def search(arr, x):
+								<br>->n = len(arr)
+								
+								<br>-># Iterate over the array in order to
+								<br>-># find the key x
+								<br>->for i in range(0, n):
+									<br>-->if (arr[i] == x):
+										<br>--->return i
+								<br>->return -1
+
+							<br>if __name__ == "__main__":
+								<br>->arr = [2, 3, 4, 10, 40]
+								<br>->x = 10
+
+								<br>->result = search(arr, x)
+								<br>->if(result == -1):
+									<br>-->print("Element is not present in array")
+								<br>->else:
+									<br>-->print("Element is present at index", result)
+						</code>
+					</post>
+					<h2>Binary Search</h2>
+					<p>Algoritma ini bekerja pada array yang sudah diurutkan dengan membagi interval pencarian menjadi dua secara berulang. Jika target cocok dengan elemen tengah, kembalikan elemen tersebut; jika tidak, 
+						lanjutkan pencarian ke kiri atau ke kanan.</p>
+						<p>Misalnya: Perhatikan array   arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91} , dan  kuncinya = 23 .</p>
+					<table>
+						<tr>
+							<td><img src="img/Binary-Search-1.webp" alt="" width="350px" height="200px"></td>
+							<td><img src="img/Binary-Search-2.webp" alt="" width="350px" height="200px"></td>
+						</tr>
+						<tr>
+							<td><img src="img/Binary-Search-3.webp" alt="" width="350px" height="200px"></td>
+							<td><img src="img/Binary-Search-4.png" alt="" width="350px" height="200px"></td>
+						</tr>
+					</table>
+					<h3>Contoh Code</h3>
+					<post>
+						<code>
+							data = [1,2,3,4,6,7,8,9]
+
+							<br>def binarysearch(dat,key):
+							<br>i_awal = 0
+							<br>i_akhir = len(data)-1
+							<br>ketemu = False
+
+
+							<br>while i_awal <= i_akhir and not ketemu:
+								<br>->tengah = (i_awal + i_akhir)//2
+								<br>->if data[tengah] == key:
+								<br>->ketemu = True
+								<br>->else:
+								<br>->if data[tengah] > key:
+									<br>-->i_akhir = tengah -1
+								<br>->else:
+									<br>-->i_awal = tengah +1
+							<br>return ketemu
+
+							<br>print(binarysearch(data,8))
+						</code>
+					</post>
+				</section>
+		
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>

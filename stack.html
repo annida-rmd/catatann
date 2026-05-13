@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Stack</h1>
+					<p>Tumpukan (stack): kumpulan barang yang terurut di mana penambahan barang baru dan penghapusan barang yang sudah ada selalu terjadi di ujung yang sama. Ujung ini biasanya disebut sebagai "atas." Ujung yang berlawanan dengan atas dikenal sebagai "dasar." 
+						Prinsip pengurutan ini terkadang disebut LIFO/FILO.</p>
+					<img src="img/stack1.png" alt="" width="550px" height="400px">
+					<h2>Operasi pada stack</h2>
+					<ul>
+						<li>stack (), inisialisasi stack yang kosong</li>
+						<li>push(data), penambahan data baru pada posisi top dari stack</li>
+						<li>pop(), penghapusan data yang terdapat di posisi top dari stack. Return value dari fungsi ini adalah data yang 
+							dihapus dari stack tersebut</li>
+						<li>peek(), informasi data yang terletak pada posisi top</li>
+						<li>isEmpty(), untuk memeriksa apakah stack dalam keadaan kosong</li>
+						<li>size(), informasi jumlah data yang terdapat pada stack</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							stack = [] <br>
+
+							# append() function to push element in the stack
+							<br>stack.append('a')
+							<br>stack.append('b')
+							<br>stack.append('c')
+
+							<br>print('Initial stack')
+							<br>print(stack)
+							<br># pop() function to pop element from stack in LIFO order
+							<br>print('\nElements popped from stack:')
+							<br>print(stack.pop())
+							<br>print(stack.pop())
+							<br>print(stack.pop())
+
+							<br>print('\nStack after elements are popped:')
+							<br>print(stack)
+
+							<br># uncommenting print(stack.pop()) will cause an IndexError as the stack is now empty
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Bubble Sort</h1>
+					<p>Bubble Sort adalah algoritma pengurutan paling sederhana yang bekerja dengan berulang kali menukar elemen yang berdekatan jika urutannya salah. Algoritma ini tidak efisien untuk kumpulan data besar karena
+						 kompleksitas waktu rata-rata dan terburuknya cukup tinggi.</p>
+					
+					<table>
+						<tr>
+							<td><img src="img/bubble-sort-1.webp" alt="" width="250px" height="170px"></td>
+							<td><img src="img/bubble-sort-2.webp" alt="" width="250px" height="170px"></td>
+							<td><img src="img/bubble-sort-3.webp" alt="" width="250px" height="170px"></td>
+						</tr>
+					</table>
+					<ul>
+						<li>Mengurutkan array menggunakan beberapa tahapan. Setelah tahapan pertama, nilai maksimum dipindahkan ke akhir (posisi yang benar). Dengan cara yang sama, setelah tahapan kedua, nilai terbesar kedua dipindahkan ke posisi kedua dari bawah, dan seterusnya.</li>
+						<li>Pada setiap tahapan, proses hanya yang belum berpindah ke posisi yang benar. Setelah k tahapan, k terbesar harus telah dipindahkan ke k posisi terakhir.</li>
+						<li>Dalam satu tahapan, kita mempertimbangkan elemen-elemen yang tersisa dan membandingkan semua elemen yang berdekatan, lalu menukar posisi jika elemen yang lebih besar berada sebelum elemen yang lebih kecil. Jika kita terus melakukan ini, kita akan mendapatkan elemen terbesar (di antara elemen-elemen yang tersisa) pada posisi yang benar.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							lst = [5,0,1,10,7,2,5,4,6,9]
+							<br>print(lst)
+							<br>for k in range(1,len(lst)):
+								<br>->for i in range(0,len(lst)-1):
+									<br>-->if lst[i]>lst[i+1]:
+										<br>--->lst[i],lst[i+1] = lst[i+1],lst[i]
+							<br>print(lst)
+						</code>
+					</post>
+				</section>
+				<section class="card">
+					<h1>Selection Sort</h1>
+					<p>Selection Sort adalah algoritma pengurutan berbasis perbandingan. 
+						Algoritma ini mengurutkan dengan berulang kali memilih elemen terkecil (atau terbesar) dari bagian yang belum diurutkan dan menukarnya dengan elemen pertama yang belum diurutkan.</p>
+					<img src="img/select.png" alt="" width="430px" height="575px">
+					<ul>
+						<li>Cari elemen terkecil dan tukar posisinya dengan elemen pertama. Dengan cara ini kita mendapatkan elemen terkecil pada posisi yang benar.</li>
+						<li>Kemudian, cari elemen terkecil di antara elemen yang tersisa (atau terkecil kedua) dan tukarkan dengan elemen kedua tersebut.</li>
+						<li>Kita terus melakukan ini sampai semua elemen dipindahkan ke posisi yang benar.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							lst = [4,7,1,9,3,10,6]
+							<br>print(lst)
+							<br>for i in range(0,len(lst)-1):
+								<br>->min=i
+								<br>->for j in range(i+1,len(lst)):
+									<br>-->if lst[j]'<'lst[min]:
+										<br>--->min = j
+								<br>->lst[i],lst[min]=lst[min],lst[i]
+							<br>print(lst)
+
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>

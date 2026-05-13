@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Hashing</h1>
+					<p>Hashing adalah teknik yang digunakan dalam struktur data yang secara efisien menyimpan dan mengambil data dengan 
+                        cara yang memungkinkan akses cepat.</p>
+                    <ul>
+                        <li>Hashing melibatkan pemetaan data ke indeks tertentu dalam tabel hash (array item) menggunakan fungsi hash . Ini memungkinkan pengambilan informasi yang cepat berdasarkan kuncinya.</li>
+                        <li>Keunggulan hashing adalah kita dapat melakukan ketiga operasi (pencarian, penyisipan, dan penghapusan) dalam waktu O(1) rata-rata.</li>
+                        <li>Hashing terutama digunakan untuk mengimplementasikan sekumpulan item yang berbeda (hanya kunci) dan kamus (pasangan kunci-nilai).</li>
+                    </ul>
+                    <p>Berikut contoh hashing menggunakan metode modulo. Fungsi hash H(x) = x % 10mengubah bilangan besar apa pun menjadi nilai yang lebih kecil antara 0 dan 9.</p>
+					<img src="img/hashingwebp.webp" alt="" width="600px" height="300px">
+					<h3>Komponen Hashing</h3>
+                    <p>Secara garis besar, hashing terdiri dari tiga komponen:</p>
+					<ol type="1">
+                        <li>Kunci: Kunci dapat berupa string atau bilangan bulat apa pun yang dimasukkan sebagai input ke dalam fungsi hash, yaitu teknik yang menentukan indeks atau lokasi penyimpanan suatu item dalam struktur data.</li>
+                        <li>Fungsi Hash: Menerima kunci masukan dan mengembalikan indeks elemen dalam sebuah array yang disebut tabel hash. Indeks tersebut dikenal sebagai indeks hash .</li>
+                        <li>Tabel Hash: Tabel hash biasanya berupa array berisi daftar. Tabel ini menyimpan nilai yang sesuai dengan kunci. Hash menyimpan data secara asosiatif dalam sebuah array di mana setiap nilai data memiliki indeks uniknya sendiri.</li>
+                    </ol>
+                    <img src="img/Components-of-Hashing.webp" alt="" width="600px" height="400px">
+                    <h3>Collision</h3>
+                    <p>54, 26, 93, 17, 77, 31, 44, 55, 20</p>
+                    <p>collision : Ketika dua item di-hash ke slot yang sama, kita harus memiliki metode sistematis untuk menempatkan item kedua di tabel hash.</p>
+                    <p>Solusi: <br>open addresing: yaitu mencoba menemukan slot atau alamat terbuka berikutnya di tabel hash.</p>
+                    <ol type="1">
+                        <li>Linear Probing : kita mencari secara berurutan, slot demi slot, sampai kita menemukan posisi terbuka.</li>
+                        <li>Quadratic Probing :Ini berarti bahwa jika nilai hash pertama adalah h, nilai-nilai berikutnya adalah h+1, h+4, h+9, h+16, dan seterusnya.</li>
+                    </ol>
+                    <img src="img/open.png" alt="" width="700px" height="400px">
+				</section>
+		
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>

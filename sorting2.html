@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Insertion Sort</h1>
+					<p>Insertion sort adalah algoritma pengurutan sederhana yang bekerja dengan cara memasukkan setiap elemen dari daftar yang belum diurutkan secara iteratif ke posisi yang benar dalam bagian daftar yang sudah diurutkan. Ini seperti mengurutkan kartu remi di tangan Anda. Anda membagi kartu menjadi dua kelompok: kartu yang sudah diurutkan dan kartu yang belum diurutkan. Kemudian, Anda mengambil kartu dari kelompok yang belum diurutkan dan meletakkannya di
+						 tempat yang tepat dalam kelompok yang sudah diurutkan.</p>
+					<img src="img/insert.png" alt="" width="500px" height="475px">
+					<ul>
+						<li>Mulailah dengan elemen kedua karena elemen pertama diasumsikan sudah terurut.</li>
+						<li>Bandingkan elemen kedua dengan elemen pertama; jika elemen kedua lebih kecil, tukar posisinya.</li>
+						<li>Insertion Sort Algorithm - GeeksforGeeks.html</li>
+						<li>Ulangi hingga seluruh array terurut.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							lst = [1,6,3,9,2,4]
+
+							<br>for i in range(1,len(lst)):
+							<br>nilaiawal = lst[i]
+							<br>temp = i
+							<br>while (lst[temp-1] > nilaiawal and temp > 0):
+								<br>->lst[temp] = lst[temp-1]
+								<br>->temp -= 1
+
+							<br>lst[temp] = nilaiawal
+							<br>print(lst)
+						</code>
+					</post>
+				</section>
+				<section class="card">
+					<h1>Quick Sort</h1>
+					<p>QuickSort adalah algoritma pengurutan berdasarkan prinsip Bagi dan Taklukkan yang memilih sebuah elemen sebagai pivot dan mempartisi array yang diberikan di sekitar pivot yang dipilih dengan menempatkan pivot pada posisi yang benar dalam 
+						array yang telah diurutkan.</p>
+					<img src="img/quicksort.webp" alt="" width="700px" height="350px">
+					<p>Pada dasarnya ada tiga langkah dalam algoritma tersebut:</p>
+					<ul>
+						<li>Pilih Pivot: Pilih salah satu elemen dari array sebagai pivot. Pilihan pivot dapat bervariasi (misalnya, elemen pertama, elemen terakhir, elemen acak, atau median).</li>
+						<li>Mempartisi Larik: Susun ulang larik di sekitar pivot. Setelah dipartisi, semua elemen yang lebih kecil dari pivot akan berada di sebelah kirinya, dan semua elemen yang lebih besar dari pivot akan berada di sebelah kanannya.</li>
+						<li>Panggilan Rekursif: Terapkan proses yang sama secara rekursif pada dua sub-array yang telah dipartisi.</li>
+						<li>Kasus Dasar: Rekursi berhenti ketika hanya tersisa satu elemen dalam sub-array, karena satu elemen sudah terurut.</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							def Partition(A,start,end):
+							<br>pivot = A[end]
+							<br>pIndex = start
+							<br>for i in range(start,end):
+								<br>->if (A[i] <= pivot):
+									<br>-->[i],A[pIndex]=A[pIndex],A[i]
+									<br>-->pIndex=pIndex+1
+							<br>A[pIndex],A[end]=A[end],A[pIndex]
+							<br>return pIndex
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Quiz 02 </title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<h2>Catatan</h2>
+				</div>
+
+				<div class="profile">
+					<h3>Annida Ramadayanti</h3>
+					<p>250411100173</p>
+				</div>
+			</div>
+		</header>
+		<div class="wrapper">
+			<nav><h2>Struktur Data</h2>
+				<a href="stack.html">Stack</a>
+				<a href="antrian.html">Antrian</a>
+				<a href="double_antrian.html">Double Antrian</a>
+				<a href="infixpostfix.html">Infix to Postfix</a>
+				<a href="infixprefix.html">Infix to Prefix</a>
+				<a href="postfixinfix.html">Postfix to Infix</a>
+				<a href="postfixprefix.html">Prefix to Infix</a>
+				<a href="evaluasipostfix.html">Evaluasi Postfix</a>
+				<a href="sorting1.html">Sorting 01</a>
+				<a href="sorting2.html">Sorting 02</a>
+				<a href="sorting3.html">Sorting 03</a>
+				<a href="searching.html">Searching</a>
+				<a href="hashing.html">Hashing</a>
+				<a href="linkedlist.html">Linked List</a>
+				<a href="tree.html">Tree</a><br>
+			 </nav>
+			<main> 
+				<section class="card">
+					<h1>Infix To Prefix</h1>
+					<p>Diberikan sebuah string s yang mewakili ekspresi infiks ("operand1 operator operand2"), 
+						Ubahlah string tersebut menjadi notasi prefiksnya ("operator operand1 operand2").</p>
+					<img src="img/infix-to-prefix.png" alt="" width="600px" height="300px">
+					<h2>Urutan prioritas </h2>
+					<ul>
+						<li>(^) memiliki prioritas tertinggi dan dievaluasi dari kanan ke kiri</li>
+						<li>(* dan /) berada di urutan berikutnya dengan asosiatif dari kiri ke kanan</li>
+						<li>(+ dan -) memiliki prioritas terendah dengan asosiatif dari kiri ke kanan</li>
+					</ul>
+					<h2>Contoh Code</h2>
+					<post>
+						<code>
+							Input: s = " a*(b+c)/d " 
+							<br>Output: /*a+bcd  
+							<br>Penjelasan: Ekspresi infiksnya adalah a*(b+c)/d. <br>Pertama, di dalam tanda kurung, b + c menjadi +bc. <br>Sekarang ekspresinya terlihat seperti a*(+bc)/d. <br>Selanjutnya, kalikan a dengan (+bc), sehingga menjadi *a+bc. <br>Terakhir, bagi hasil ini dengan d, sehingga menjadi /*a+bcd.
+						</code>
+					</post>
+				</section>
+			</main>
+		</div>
+
+		<footer>© 2026 Reserved by Annida Ramadayanti</footer>
+
+	</body>
+</html>
